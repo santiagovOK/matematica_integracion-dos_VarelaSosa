@@ -1,4 +1,4 @@
-# programacion-uno_integrador_VarelaSosa
+# matematica_integracion-dos_VarelaSosa
 
 Trabajo práctico de la semana de integración Nº2 sobre conjuntos, de la materia Matemática (UTN Regional San Nicolás - Tecnicatura en Programación a Distancia 2025).
 
@@ -10,7 +10,6 @@ Trabajo práctico de la semana de integración Nº2 sobre conjuntos, de la mater
 Ambos Comisión M2025-22
 
 ## Objetivo
-
 
 ## Video explicativo
 
