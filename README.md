@@ -23,16 +23,11 @@ Ambos Comisión M2025-22
 
 ---
 
-## Demostración breve
-
-![Demo](./assets/demo.GIF)
-
 ## Descripción del Proyecto
 
 
 
 ## Resultados obtenidos y observaciones finales
-
 
 ## Tecnologías utilizadas
 
