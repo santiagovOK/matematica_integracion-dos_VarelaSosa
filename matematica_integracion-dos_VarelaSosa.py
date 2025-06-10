@@ -35,6 +35,20 @@ Agregar la función bubble_sort() que usamos para el programa de programación I
 
 """
 
+def bubble_sort(lista):
+    # Obtenemos la longitud de la lista.
+    longitud = len(lista)
+    # Establecemos un bucle for para iterar sobre la lista. 
+    # El rango será la longitud de la lista, por más que el ordenamiento se complete antes. Sino deberíamos usar `break` y es mala práctica.
+    for pasada in range(longitud):
+        # Realizamos las comparaciones y los intercambios necesarios en la lista para ordenarla.
+        for i in range(0, longitud - pasada - 1):
+            # Comparamos los elementos adyacentes y los intercambiamos si están en el orden incorrecto.
+            if lista[i] > lista[i + 1]:
+                lista[i], lista[i + 1] = lista[i + 1], lista[i]
+    # Retornamos la lista ordenada.
+    return lista
+
 def analizar_dnis(lista_dnis):
     # Establecemos listas vacías para almacenar los datos posteriores
     conjuntos_digitos = []
@@ -50,28 +64,29 @@ def analizar_dnis(lista_dnis):
         sumas_digitos.append(suma)
 
     # Realizamos las operaciones de conjuntos
-    union = set.union(*conjuntos_digitos)
-    interseccion = set.intersection(*conjuntos_digitos)
+    union = bubble_sort(list(set.union(*conjuntos_digitos)))
+    interseccion = bubble_sort(list(set.intersection(*conjuntos_digitos)))
     diferencia_simetrica = set()
 
     # Calculamos la diferencia simétrica entre todos los pares
-
     for conjunto1 in range(len(conjuntos_digitos)):
         for conjunto2 in range(conjunto1 + 1, len(conjuntos_digitos)):
             diferencia_simetrica_actual = conjuntos_digitos[conjunto1] ^ conjuntos_digitos[conjunto2]
             for elemento in diferencia_simetrica_actual:
                 diferencia_simetrica.add(elemento)
 
-    # Mostramos los resultados
+    diferencia_simetrica = bubble_sort(list(diferencia_simetrica))
 
+    # Mostramos los resultados
     print(f"Unión: {union}")
     print(f"Intersección: {interseccion}")
     print(f"Diferencia Simétrica: {diferencia_simetrica}")
     print(f"Suma de dígitos por DNI: {sumas_digitos}")
     print(f"Frecuencia de dígitos: {frecuencias_digitos}")
 
-    # Evaluamos la Relación equilibrada entre ambos conjuntos (Compuertas) en base a la expresión lógica elegida.
 
+    # Evaluamos la Relación equilibrada entre ambos conjuntos (Compuertas) en base a la expresión lógica elegida.
+    print("\nEvaluación de la condición lógica (expresión lógica sobre relaciones equilibradas) entre los conjuntos de dígitos: ")
     for indice_a in range(len(conjuntos_digitos)):
         for indice_b in range(indice_a + 1, len(conjuntos_digitos)):
             conjunto_a = conjuntos_digitos[indice_a]
@@ -86,6 +101,8 @@ def analizar_dnis(lista_dnis):
             # Condición: más de 3 compartidos Y al menos 8 distintos
             if len(interseccion) > 3 and len(union) >= 8:
                 print(f"\nRelación equilibrada entre DNI {indice_a + 1} y DNI {indice_b + 1}\n")
+            else:
+                print(f"\nNo hay relación equilibrada entre DNI {indice_a + 1} y DNI {indice_b + 1}\n")
 
 
 def main():
