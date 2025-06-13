@@ -15,13 +15,13 @@ Aplicar los conceptos teóricos de conjuntos y lógica proposicional en un caso 
 
 ## Video explicativo
 
-- [Matemática - Semana de integración II | “”]()
-- [URL de la presentación]()
+- ["TP Semana de integración II - Conjuntos - Matemática - Tec. en Programación a Distancia" (video)](https://youtu.be/uUo-6G-x5v0 )
+- [URL de la presentación](https://whimsical.com/mate-integrador-dos-varelasosa-diagramas-CxuksBMLmHF23iNkY1Q9Hj)
 
 ## Contenido
 
 - [Programa Completo](./matematica_integracion-dos_VarelaSosa.py) 
-- [Informe General (PDF)](./informe_general)
+- [Informe General (PDF)](./informe_general/mate_integrador-dos_VarelaSosa.pdf)
 
 ---
 
